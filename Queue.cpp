@@ -116,30 +116,8 @@ public:
                 return true;
             }
         }
-    }
-    bool removeFromLast()
-    {
-        if (isEmpty())
-        {
-            return false;
-		}
-        int length = getLength();
-        if (length == 1)
-        {
-            delete head;
-            head = NULL;
-            last = NULL;
-            return true;
-        }
-
-        delete last;
-        Node* temp = head;
-        for (int i = 1; i < length - 1; i++)
-            temp = temp->getNext();
-        temp->setNext(NULL);
-        last = temp;
-        return true;
-    }
+    
+   
     int getFirstElement()
     {
         if (isEmpty())
